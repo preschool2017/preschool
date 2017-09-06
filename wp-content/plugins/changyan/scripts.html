@@ -1,0 +1,11 @@
+<script type="text/javascript">
+    jQuery(function () {
+        var $ = jQuery;
+        var iframe = $('#rightBar_1');
+        var resetIframeHeight = function () {
+            iframe.height($(window).height() - iframe.offset().top - 70);
+        };
+        resetIframeHeight();
+        $(window).resize(resetIframeHeight);
+    });
+</script>

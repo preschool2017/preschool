@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>登录wordpress</title>
+<style>
+       body,html {
+                 margin: 0;
+                 padding: 0;
+                 background: #ebeff0;
+                 font-size: 14px;
+      }
+
+ div,dl,dd,dt,h1 {
+                 margin: 0;
+                 padding: 0;
+      }
+
+      #login_box {
+                 width: 50%;
+                 min-width: 320px;
+                 max-width: 460px;
+                 padding: 10px;
+                 margin: 10% auto;
+                 background: #fff;
+                 border: 5px solid #ccd4d9;
+                 border-radius: 7px;
+      }
+
+   #login_box h1 {
+                 font-size: 16px;;
+                 color: #333;
+                 border-bottom: 1px solid #ccd4d9;
+                 line-height: 3em;
+                 margin-bottom: 20px;
+      }
+
+
+   input[type=text],input[type=password],input[type=file] {
+                 width: 300px;
+                 height: 30px;
+                 line-height: 30px;
+                 padding: 0 5px;
+                 border: 1px solid #a3a3a3;
+      }
+
+.form-block label {
+                 display: block;
+      }
+
+.form-horizontal {
+                 padding: 10px 0;
+                 line-height: 30px;
+      }
+
+.form-horizontal dl {
+                 display: table;
+                 content: "";
+                 clear: both;
+                 width: 100%;
+                 margin-left: 3%;
+     }
+
+.form-horizontal dl dt,.form-horizontal dl dd {
+                 padding: 10px 0;
+     }
+
+.form-horizontal dl dt {
+                width: 60px;
+                float: left;
+                text-align: right;
+     }
+
+.form-horizontal dl dd {
+                padding-left: 60px;
+                text-align: left;
+     }
+
+.form-horizontal a {
+                color: #1f56a2;
+                text-decoration: none;
+     }
+
+.form-horizontal a:hover {
+                color: #134386;
+                text-decoration: underline;
+     }
+
+            .tips {
+                text-align: right;
+                padding-right: 20%;
+                margin: 0;
+      }
+
+#username,#password {
+                width: 64%;
+      }
+
+     #login,#signin {
+                width: 40%;
+                display: inline-block;
+                background: url(http://i0.itc.cn/20150702/3259_f9aa74cd_e7d2_c040_d544_bd155c9a2566_1.jpg)
+                repeat-x;
+                width: 75px;
+                height: 35px;
+                border-radius: 10px;
+                font-size: 18px;
+                color: #fff;
+                text-decoration: none;
+                text-align: center;
+                line-height: 35px;
+                font-weight: bold;
+      }
+
+#login:hover,#signin:hover {
+                text-decoration: none;
+      }
+
+            #login {
+                margin-right: 6%;
+                border: none;
+                line-height: 30px;
+                vertical-align: 0px;
+                cursor: pointer;
+                *vertical-align: -9px;
+     }
+
+            /* Firefox */
+            @
+                -moz-document url-prefix  () { #login {
+                 vertical-align: -0.6px;
+    }
+}
+</style>
+    <script src="http://js.sohu.com/library/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+           var version;
+           $(function() {
+                var userAgent = window.navigator.userAgent.toLowerCase();
+                version = $.browser.version;
+           });
+
+           function checkfrom(){
+                var log=document.getElementById("username").value;
+                var pwd=document.getElementById("password").value;
+                if(log==""){
+                      alert("请填写用户名");
+                      document.getElementById("username").focus();
+                      return false;
+                }else if(pwd==""){
+                      alert("请填写密码");
+                      document.getElementById("username").focus();
+                      return false;
+                }else{
+                      $.ajax({
+                               type:'post',
+                                url:'http://www.preschool.net.cn/wp-login.php',
+                               data:{log:log,pwd:pwd},
+                           dataType:'text',
+                            success:function(data){
+                                            if(data.length<10000){
+                                                 $("#tip").html("<label>用户名或密码错误！</label>")
+                                            }else{
+                                                 window.close();
+                                            }
+                                            }
+                             });
+         }
+      }
+    </script>
+</head>
+<body>
+<!--[if IE 8]>
+<style type="text/css">
+#login{vertical-align: 1px; line-height:35px;}
+</style>
+<![endif]-->
+
+     <div id="login_box" class="form-horizontal">
+         <h1>登录</h1>
+         <dl>
+            <dt><label for="inputEmail">用户名：</label></dt>
+            <dd><input type="text" name="username" id="username"></dd>
+         </dl>
+         <dl>
+            <dt><label for="inputPwd">密 码：</label></dt>
+            <dd>
+               <input type="password" name="password" id="password">
+            </dd>
+         </dl>
+         <dl>
+         <dd>
+               <input type="button" title="登录" id="login" onclick="javascript:checkfrom();" value="登录">
+               <a target="_blank" href="http://www.preschool.net.cn/wp-login.php?action=register" id="signin" title="注册">注册</a>
+         </dd>
+         <div id="tip"></div>
+         </dl>
+   </div>
+</body>
+</html>

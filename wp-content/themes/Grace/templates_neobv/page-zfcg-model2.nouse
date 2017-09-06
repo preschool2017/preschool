@@ -1,0 +1,147 @@
+<?php 
+/*
+Template Name: 政府采购(模板2)
+*/
+get_header();
+?>
+    <link rel="stylesheet" type="text/css" href="/wp-content/themes/Grace/g-procurement/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/wp-content/themes/Grace/g-procurement/css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="/wp-content/themes/Grace/g-procurement/css/icons/icomoon/styles.css">
+<style>
+    .accc input{background:#3a3a3a;border-radius: 0px;border:0px;outline:none; text-align: center;}
+    .accc input:hover{background:#a054a4;outline:none;}
+    .accc input:focus{background:#a054a4;outline:none;}
+</style>
+
+
+<?php 
+/*
+if(have_posts()): while(have_posts()):the_post();  
+
+
+$linkcat = get_post_meta($post->ID, 'linkcat_value', true);
+
+$link_cat_ids = explode(",",$linkcat);
+
+foreach ( $link_cat_ids as $key => $value) {
+
+}
+*/
+?>
+<div class="page-single page-nav"  >
+	<div>
+		<!--<div class="container">-->
+			<h3 class="title">
+				<div class="container">
+    <div class="page-container" style="margin: 0 auto; text-decoration: center; overflow: hidden;">
+        <!-- Page content -->
+        <div class="page-content" style="padding:0px;">
+            <!-- Main sidebar -->
+            <!-- /main sidebar -->
+            <!-- Main content -->
+            <div class="content-wrapper" style=" padding:0px;">
+                <!-- Page header -->
+                <!-- /page header -->
+                <!-- Content area -->
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-9" style="padding:0px;">
+                            <a href="#"><img src="/wp-content/themes/Grace/g-procurement/images/img1.jpg" class="col-md-6  col-xs-12" alt=""></a>
+                            <a href="#"><img src="/wp-content/themes/Grace/g-procurement/images/img2.jpg" class="col-md-6  col-xs-12" alt=""></a>
+                            <div class="col-md-12" style="margin-top: 15px;">
+                                <a href="#" class="accc btn btn-primary active col-md-3" style="border-radius: 0px; background: #a054a4; border:0px;">商品列表</a>
+                            </div>
+							                             
+                               
+							
+                           <?php query_posts('showposts=3&cat=3');?> 
+							<div class="ajax-load-box posts-con">
+							<?php while ( have_posts() ) : the_post(); ?>
+							<div class="col-md-12" >
+                                <div class="col-md-12" style="margin-top: 15px; border: 1px solid #999; width: 100%;">
+                                <?php include( TEMPLATEPATH.'/includes/excerpt.php' ); ?>    
+                                </div>
+                            </div>
+								<?php endwhile; ?>
+								
+								
+								
+									<?php if( suxingme('suxingme_ajax_posts',true) ) { ?>
+							<div id="ajax-load-posts"><?php echo fa_load_postlist_button();?></div>
+						<?php  }else {
+							the_posts_pagination( array(
+								'prev_text'          =>上页,
+								'next_text'          =>下页,
+								'screen_reader_text' =>'',
+								'mid_size' => 1,
+						) ); }  ?>
+						
+							</div>
+							
+                            <div class="col-md-12" style="margin-top: 15px;">
+                                <a href="#" class="accc btn btn-primary active col-md-3" style="border-radius: 0px; background: #a054a4; border:0px;">商品列表</a>
+                            </div>
+                            
+							<?php query_posts('showposts=3&cat=3');?> 
+							<div class="ajax-load-box posts-con">
+							<?php while ( have_posts() ) : the_post(); ?>
+							<div class="col-md-12" >
+                                <div class="col-md-12" style="margin-top: 15px; border: 1px solid #999; width: 100%;">
+                                <?php include( TEMPLATEPATH.'/includes/excerpt.php' ); ?>    
+                                </div>
+                            </div>															
+								<?php endwhile; ?>
+								
+								<?php if( suxingme('suxingme_ajax_posts',true) ) { ?>
+							<div id="ajax-load-posts"><?php echo fa_load_postlist_button();?></div>
+						<?php  }else {
+							the_posts_pagination( array(
+								'prev_text'          =>上页,
+								'next_text'          =>下页,
+								'screen_reader_text' =>'',
+								'mid_size' => 1,
+						) ); }  ?>
+						
+								
+							</div>
+							
+                        </div>
+                        <div class="accc col-md-3" style="padding: 0px;">
+                            <div style="text-align: center;">
+                                <div class="col-md-12" style="padding: 0px;">
+                                    <a href="#"><img src="/wp-content/themes/Grace/g-procurement/images/zrye.png" alt=""></a>
+                                </div>
+                                <div class="col-md-12" style="text-align: center; margin-top: -45px; margin-left:75px;">    
+                                    <input type="button" value="幼儿园入驻" href="#" class=" btn btn-primary col-md-5">
+                            </div>
+                            <div class="col-md-12" style="padding:0px;text-align: center;margin-top: 15px;">
+                                <div class="col-md-12" style="padding: 0px;">
+                                    <a href="#"><img src="/wp-content/themes/Grace/g-procurement/images/csrz.png" class="col-md-12" alt=""></a>
+                                </div>
+                                <div class="col-md-12" style="text-align: center; margin-top: -50px; margin-left:20px;">
+                                    <input type="button" value="厂商入驻" href="#" class="btn btn-primary col-md-5" style="margin-right:10px;">
+                                    <input type="button" value="发布采购需求" href="#" class=" btn btn-primary col-md-5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /content area -->
+            </div>
+            <!-- /main content -->
+        </div>
+        <!-- /page content -->
+    </div>
+</div>
+			</h3>
+			<div class="page-dec">
+				
+			</div>
+		<!--</div>-->
+	</div>
+	
+</div>
+<script type="text/javascript" src="/wp-content/themes/Grace/g-procurement/js/angular/angular.1.4.6.min.js"></script>
+<script type="text/javascript" src="/wp-content/themes/Grace/g-procurement/js/core/jquery.min.js"></script>
+<?php /*endwhile; endif;*/ ?>	
+<?php get_footer(); ?>
