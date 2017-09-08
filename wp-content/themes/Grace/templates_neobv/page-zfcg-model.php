@@ -1,7 +1,10 @@
+
 <?php 
 /*
 Template Name: 政府采购(模板 - g-procurement)
 */
+
+
 get_header();
 ?>
 
@@ -58,18 +61,18 @@ foreach ( $link_cat_ids as $key => $value) {
                 <!-- Content area -->
                 <div class="content">
                     <div class="row">
-                        <div class="col-md-9" style="padding:0px;">
+                        <div class="col-md-9" style="padding:0px;" id="cleft">
                             <div class="row">
-                                <div class="col-md-6 visible-md visible-lg" style="padding-right: 0px; padding-top: 0px; padding-bottom: 0px;">
+                                <div class="col-md-6 visible-md visible-lg" id="cbox1" style="padding-right: 0px; padding-top: 0px; padding-bottom: 0px;">
                                     <a href="http://www.preschool.net.cn/blog/2017/06/14/中国学前教育网承担政府采购的渊源说明/" style="display:inline-block;"><img src="/wp-content/themes/Grace/g-procurement/images/img1.png" class="col-md-12  col-xs-12"></a>
                                 </div>
-                                <div class="col-md-6 visible-md visible-lg" style="padding-left: 0px; padding-top: 0px; padding-bottom: 0px;page-break-inside: ">
+                                <div class="col-md-6 visible-md visible-lg" id="cbox2" style="padding-left: 0px; padding-top: 0px; padding-bottom: 0px;page-break-inside: ">
                                     <a href="http://www.preschool.net.cn/blog/2017/06/21/幼儿园政府采购参与流程/" style="display:inline-block;"><img src="/wp-content/themes/Grace/g-procurement/images/img2.png" class="col-md-12  col-xs-12"></a>
                                 </div>
-                                <div class="col-md-6 visible-sm visible-xs" style="margin-top: 15px;">
+                                <div class="col-md-6 visible-sm visible-xs"  style="margin-top: 15px;">
                                     <a href="http://www.preschool.net.cn/blog/2017/06/14/中国学前教育网承担政府采购的渊源说明/" style="display:inline-block;"><img src="/wp-content/themes/Grace/g-procurement/images/img1.png" class="col-md-12  col-xs-12"></a>
                                 </div>
-                                <div class="col-md-6 visible-sm visible-xs"  style="margin-top: 15px;">
+                                <div class="col-md-6 visible-sm visible-xs"   style="margin-top: 15px;">
                                     <a href="http://www.preschool.net.cn/blog/2017/06/21/幼儿园政府采购参与流程/" style="display:inline-block;"><img src="/wp-content/themes/Grace/g-procurement/images/img2.png" class="col-md-12  col-xs-12"></a>
                                 </div>
                                 <div class="row hidden-md hidden-lg " style="text-align: center; padding: 0px;margin-top: 15px; margin-bottom: 25px;">
@@ -216,6 +219,19 @@ foreach ( $link_cat_ids as $key => $value) {
 </div>
 <script type="text/javascript" src="/wp-content/themes/Grace/g-procurement/js/angular/angular.1.4.6.min.js"></script>
 <script type="text/javascript" src="/wp-content/themes/Grace/g-procurement/js/core/jquery.min.js"></script>
+<!--[if lte IE 7]>
+	<script type="text/javascript">
+      			cleft.className="col-md-8";
+      			cbox1.className="col-md-5 visible-md visible-lg";
+      			cbox2.className="col-md-5 visible-md visible-lg";
+      			cbox1.style.paddingRight="20"
+      			cbox1.style.paddingBottom="8"
+      			 var $$ = jQuery.noConflict();
+      			 $$(".hidden-xs").find(".col-md-12").css("padding-bottom","20px")
+      </script>
+      
+<![endif]-->
+
 <?php 
 //endwhile; endif; 
 ?>  
