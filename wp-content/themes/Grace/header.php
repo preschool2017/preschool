@@ -11,7 +11,7 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
-<?php wp_head(); ?>
+<?php wp_head();?>
 <base target="_blank" />
 </head>
 <body <?php body_class( suxingme_bodyclass() ); ?>>

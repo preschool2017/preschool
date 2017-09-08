@@ -1,4 +1,6 @@
-<?php get_header();?>
+<?php
+get_header();
+?>
 <div id="page-content" <?php if( suxingme('suxing_slide_img_button','index_slide_sytle_1') == 'index_slide_sytle_3' ) { echo 'class="page-content-110"';}?>>
 	<input id="id-indexpage" type="hidden" name="name-indexpage" value="dummy"> 
 	<?php 
@@ -11,7 +13,7 @@
 			include( get_template_directory().'/includes/topslide-one-style.php' ); 
 	    }
         else if( suxingme('suxing_slide_img_button','index_slide_sytle_1') == 'index_slide_sytle_4' && ! is_paged() ) {
-    		include( get_template_directory().'/includes/topslide-four-style.php' ); 
+    		include( get_template_directory().'/includes/topslide-four-style.php' );
         }
 	    else{
 	    	echo "";

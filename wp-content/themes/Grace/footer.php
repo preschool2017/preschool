@@ -141,7 +141,14 @@
     </div>
 </div>      
 <?php wp_footer();
+/*if (current_user_can('administrator')){
+    global $wpdb;
+    echo "<pre>";
+    print_r($wpdb->queries);
+    echo "</pre>";
+}*/
 
 ?>
+
 </body>
 </html>
