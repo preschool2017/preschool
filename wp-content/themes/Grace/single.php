@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="row">
 			
-			<div class="article col-xs-12 col-sm-8 col-md-8">
+			<div class="article col-xs-12 col-sm-8 col-md-8" id="Ieleft">
 				
 				<?php if(!wp_is_mobile()): echo single_pc_top_ad_pic();endif; if(wp_is_mobile()): echo single_mini_top_ad_pic(); endif; ?>
 				<?php 

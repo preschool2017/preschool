@@ -39,7 +39,7 @@
 						fn.apply( context, args );
 					}
 				};
-			},
+			}
 		},
 		$ : window.jQuery || null
 	};

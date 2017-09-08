@@ -2,7 +2,7 @@
 <div id="page-content">
 	<div class="container">
 		<div class="row">
-			<div class="article  col-xs-12 col-sm-8 col-md-8">
+			<div class="article  col-xs-12 col-sm-8 col-md-8" id="Ieleft">
 				<div class="post page">
 					<?php if(have_posts()): while(have_posts()):the_post();  ?>
 					<div class="post-title">
