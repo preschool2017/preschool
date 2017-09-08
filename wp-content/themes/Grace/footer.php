@@ -139,12 +139,20 @@
 		<span class="close-top"></span>
 			<span class="close-bottom"></span>
     </div>
-</div> 
- 
+
+</div>  
+
+</div>    
+
 <?php wp_footer();
+/*if (current_user_can('administrator')){
+    global $wpdb;
+    echo "<pre>";
+    print_r($wpdb->queries);
+    echo "</pre>";
+}*/
 
 ?>
-
 <!--[if lte IE 7]>
 	<link rel="stylesheet" type="text/css" href="includes/font-awesome/css/fontello-ie7.css"/>
       <script type="text/javascript">

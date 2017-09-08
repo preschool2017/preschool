@@ -7,5 +7,5 @@ include('widget-postlist.php');
 include('widget-mostviews.php');
 include('widget-social.php');
 include('widget-links.php');
-//include('widget-my.php');
+include('widget-my.php');
 ?>
