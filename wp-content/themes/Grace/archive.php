@@ -4,7 +4,7 @@
 		<div class="row">
 
 			<?php if(have_posts()) : ?>
-				<div class="article col-xs-12 col-sm-8 col-md-8">
+				<div class="article col-xs-12 col-sm-8 col-md-8" id="Ieleft">
 					<?php if (suxingme('suxingme_breadcrumbs',false) && function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
 					<div class="ajax-load-box posts-con">
 						<?php while ( have_posts() ) : the_post(); 

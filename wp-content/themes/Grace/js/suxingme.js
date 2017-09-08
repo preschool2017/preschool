@@ -1,6 +1,7 @@
+
 jQuery(document).ready(function($) {
 
-    //wow
+    //wow 
     if( suxingme_url.wow ){
         var wow = new WOW({
             boxClass: 'wow',
@@ -9,7 +10,11 @@ jQuery(document).ready(function($) {
             mobile: true,
             live: true
         });
+  if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<9){
+
+    }else{
         wow.init();
+    }
     }
     
 
@@ -38,7 +43,7 @@ jQuery(document).ready(function($) {
                 responsive:{    
                     768:{
                       items:1,
-                      nav : false,
+                      nav : false
                     }
                 }
             });
@@ -56,12 +61,13 @@ jQuery(document).ready(function($) {
                 responsive:{    
                     768:{
                       items:1,
-                      nav : false,
+                      nav : false
                     }
                 }
             });
             break;
         case 'index_slide_sytle_3' :
+      
             var owl = $('.top-slide-three'); 
             owl.owlCarousel({
                 items:1,
@@ -73,7 +79,7 @@ jQuery(document).ready(function($) {
                     768 : {
                         items: 1,
                         margin: 0,
-                        nav : false,
+                        nav : false
                     },
                     992 : {
                         items: 3,
@@ -81,7 +87,7 @@ jQuery(document).ready(function($) {
                         center: true,
                         autoWidth:true,
                         nav : true,
-                        navText:'',
+                        navText:''
                     }
                 }
             });
@@ -99,7 +105,7 @@ jQuery(document).ready(function($) {
                 responsive:{    
                     768:{
                       items:1,
-                      nav : false,
+                      nav : false
                     }
                 }
             });
@@ -128,7 +134,7 @@ jQuery(document).ready(function($) {
                 $('#loading-comments').after(result.fadeIn(800));
                 $('.commentlist').after(nextlink);
                 $('.commentlist .avatar').lazyload({
-                    event: 'scrollstop',
+                    event: 'scrollstop'
                 });
             }
         })
@@ -227,7 +233,7 @@ jQuery(document).ready(function($) {
     $(function() {
         $('.to-top').toTop();
      });
-    $('body').append('<a class="to-top" style="border:1px solid #fff;"><i class="icon-up-big"></i></a>');
+    //$('body').append('<a class="to-top" style="border:1px solid #fff;"><i class="icon-up-big"></i></a>');
 
     /*
     -------------------------
@@ -302,10 +308,10 @@ jQuery(document).ready(function($) {
 });
 
 
-document.addEventListener('DOMContentLoaded', function(){
+jQuery(document).bind('DOMContentLoaded', function(){
    var aluContainer = document.querySelector('.comment-form-smilies');
     if ( !aluContainer ) return;
-    aluContainer.addEventListener('click',function(e){
+    jQuery(".comment-form-smilies:first").bind('click',function(e){
     var myField,
         _self = e.target.dataset.smilies ? e.target : e.target.parentNode,
         tag = ' ' + _self.dataset.smilies + ' ';
@@ -367,7 +373,7 @@ jQuery(document).on("click", "#fa-loadmore", function($) {
                 } else if (data.code == 200) {
                     _postlistWrap.append(data.postlist);
                     if( jQuery.isFunction(jQuery.fn.lazyload) ){
-                        jQuery("img.lazy,img.avatar").lazyload({ effect: "fadeIn",});
+                        jQuery("img.lazy,img.avatar").lazyload({ effect: "fadeIn"});
                     } 
                     if (data.next) {
                         if( suxingme_url.wow ){
@@ -424,7 +430,7 @@ jQuery(document).on("click", ".post-nav span", function($) {
                 } else if (data.code == 200) {
                     _postlistWrap.html(data.postlist);
                     if( jQuery.isFunction(jQuery.fn.lazyload) ){
-                        jQuery("img.lazy,img.avatar").lazyload({ effect: "fadeIn",});
+                        jQuery("img.lazy,img.avatar").lazyload({ effect: "fadeIn"});
                     }
                     if (data.next && _self.data("total") > 1) {
                         _button.show();
@@ -553,7 +559,7 @@ jQuery('#do-contribute').click(function() {
         url: suxingme_url.url_ajax,
         type: 'POST',
         dataType: 'json',
-        data: {action: 'do_contribute' , cats: cats , title: title , post_content: post_content , type:type, name:name,source:source,email:email,_suxingnonce:_suxingnonce },
+        data: {action: 'do_contribute' , cats: cats , title: title , post_content: post_content , type:type, name:name,source:source,email:email,_suxingnonce:_suxingnonce }
     })
     .done(function(data) {
         if( data.status != 0 ){

@@ -27,7 +27,7 @@
 <?php } else{ ?>
 <div id="footer" class="two-s-footer clearfix">
 	<div class="footer-box">
-		<div class="container">
+		<div class="container" id="footer-box-in">
 			<div class="social-footer">
 				<?php if(suxingme('suxingme_social_weibo')){?>
 					<a class="weiboii" href="<?php echo suxingme('suxingme_social_weibo') ;  ?>" target="_blank"><i class="icon-weibo"></i></a>
@@ -139,7 +139,7 @@
 		<span class="close-top"></span>
 			<span class="close-bottom"></span>
     </div>
-</div>      
+</div>    
 <?php wp_footer();
 /*if (current_user_can('administrator')){
     global $wpdb;
@@ -149,6 +149,12 @@
 }*/
 
 ?>
-
+<!--[if lte IE 7]>
+	<link rel="stylesheet" type="text/css" href="includes/font-awesome/css/fontello-ie7.css"/>
+      <script type="text/javascript">
+      	 var oIE=document.getElementById('Ieleft')
+    	 oIE.className="article col-xs-12 col-sm-7 col-md-7"
+      </script>
+<![endif]-->
 </body>
 </html>

@@ -7,7 +7,7 @@
 					<i class="icon-frown"></i>
 					<p><?php echo '该栏目暂无内容'; ?></p></div>
 				<?php else: ?>
-					<div class="article search-posts col-xs-12 col-sm-8 col-md-8">
+					<div class="article search-posts col-xs-12 col-sm-8 col-md-8" id="Ieleft">
 						<div class="search-title">
 							<h3><span><?php global $wp_query; echo '搜索到 ' . $wp_query->found_posts . ' 篇相关的文章';?></span></h3>
 						</div>

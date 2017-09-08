@@ -72,7 +72,7 @@ get_header();
 		<div class="main-content">
 			<div class="container">
 				<div class="row">
-					<div class="article col-xs-12 col-sm-8 col-md-8">
+					<div class="article col-xs-12 col-sm-8 col-md-8" id="Ieleft">
 					<?php
 						if( suxingme('suxing_index_custom_cat_tab',false) && suxingme('suxingme_ajax_posts',false) ){
 							$count_posts = wp_count_posts();
