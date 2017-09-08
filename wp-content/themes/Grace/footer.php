@@ -140,7 +140,7 @@
 			<span class="close-bottom"></span>
     </div>
 </div> 
-   <!-- <a class="to-top" style="border:1px solid #fff;"><!--[if lte IE 7]>↑<![endif]--><i class="icon-up-big"></i></a> -->
+ 
 <?php wp_footer();
 
 ?>
@@ -149,7 +149,8 @@
 	<link rel="stylesheet" type="text/css" href="includes/font-awesome/css/fontello-ie7.css"/>
       <script type="text/javascript">
       	 var oIE=document.getElementById('Ieleft')
-    	 oIE.className="article col-xs-12 col-sm-7 col-md-7"
+      	 if(oIE){
+    	 oIE.className="article col-xs-12 col-sm-7 col-md-7"}
       </script>
 <![endif]-->
 </body>
