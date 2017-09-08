@@ -17,18 +17,13 @@
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
     <!--[if lt IE 9]>
-      <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
-  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="includes/font-awesome/css/fontello-ie7.css"/>
+<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<link rel="stylesheet" type="text/css" href="includes/font-awesome/css/fontello-ie7.css"/>
 <link rel="stylesheet" type="text/css" href="includes/font-awesome/css/fontello-ie7-codes.css"/>
 <script src=”http://code.jquery.com/jquery-1.9.1.min.js”></script>
 <script type=text/javascript src="http://www.preschool.net.cn/wp-content/themes/Grace/js/suxingme.js?ver=Grace7"></script>
-   <style>
-        .ficon{font-family:'fontello'}
-    </style>
-    <![endif]-->
-
-    
+<![endif]-->
 
 </head>
 <body <?php body_class( suxingme_bodyclass() ); ?>>
