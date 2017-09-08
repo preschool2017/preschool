@@ -31,8 +31,8 @@ class My_Widget_Class extends WP_Widget {
 <p>
 	<label> 排序方式：
 		<select style="width:100%;" id="<?php echo $this->get_field_id('orderby'); ?>" name="<?php echo $this->get_field_name('orderby'); ?>" style="width:100%;">
-			<option value="date" <?php selected('date', $instance['orderby']); ?>>发布时间</option>
-			<option value="rand" <?php selected('id', $instance['orderby']); ?>>发布ID</option>
+			<option value="post_date" <?php selected('post_date', $instance['orderby']); ?>>发布时间</option>
+			<option value="post_modified" <?php selected('post_modified', $instance['orderby']); ?>>修改时间</option>
 		</select>
 	</label>
 </p>
@@ -49,69 +49,20 @@ function suxingme_widget_aqlist($orderby,$limit){
     ?>
     <ul class="recent-posts-widget">
         <?php
-        $args = array(
-            'post_status' => 'publish', // 只选公开的文章.
-            'post__not_in' => array(get_the_ID()),//排除当前文章
-            'ignore_sticky_posts' => 1, // 排除置頂文章.
-            'orderby' =>  $orderby, // 排序方式.
-            'cat'     => $cat,
-            'order'   => 'DESC',
-            'showposts' => $limit,
-            'tax_query' => array( array(
-                'taxonomy' => 'post_format',
-                'field' => 'slug',
-                'terms' => array(
-                    //请根据需要保留要排除的文章形式
-                    'post-format-aside',
-
-                ),
-                'operator' => 'NOT IN',
-            ) ),
-        );
-        $query_posts = new WP_Query();
-        $query_posts->query($args);
-        $i=1;
-        while( $query_posts->have_posts() ) { $query_posts->the_post(); ?>
-            <?php if($i == 1){ ?>
-                <li class="one">
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                        <div class="overlay"></div>
-                        <?php if( suxingme('suxingme_timthumb') && suxingme('suxingme_timthumb_lazyload',true) ) { ?>
-                            <img class="lazy thumbnail" data-original="<?php echo get_template_directory_uri(); ?>/timthumb.php?src=<?php echo post_thumbnail_src(); ?>&h=175&w=315.98&zc=1" src="<?php echo constant("THUMB_SMALL_DEFAULT");?>" alt="<?php the_title(); ?>" />
-                        <?php }
-                        if ( suxingme('suxingme_timthumb') && !suxingme('suxingme_timthumb_lazyload',true) ) {	?>
-                            <img class="thumbnail" src="<?php echo get_template_directory_uri(); ?>/timthumb.php?src=<?php echo post_thumbnail_src(); ?>&h=175&w=315.98&zc=1" alt="<?php the_title(); ?>" />
-                        <?php } if( suxingme('suxingme_timthumb_lazyload',true) && !suxingme('suxingme_timthumb') ){ ?>
-                            <img src="<?php echo constant("THUMB_SMALL_DEFAULT");?>" data-original="<?php echo post_thumbnail_src(); ?>" alt="<?php the_title(); ?>" class="lazy thumbnail" />
-                        <?php } ?>
-                        <?php if( !suxingme('suxingme_timthumb_lazyload',true) && !suxingme('suxingme_timthumb')){ ?>
-                            <img src="<?php echo post_thumbnail_src(); ?>" alt="<?php the_title(); ?>" class="thumbnail" />
-                        <?php } ?>
-                        <div class="title">
-                            <span><?php echo timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?></span>
-                            <h4><?php the_title(); ?></h4>
-                        </div>
-                    </a>
-                </li>
-            <?php }else{ ?>
-                <li class="others">
-                    <div class="image"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                            <?php if( suxingme('suxingme_timthumb') && suxingme('suxingme_timthumb_lazyload',true)) { ?>
-                                <img class="lazy thumbnail" data-original="<?php echo get_template_directory_uri(); ?>/timthumb.php?src=<?php echo post_thumbnail_src(); ?>&h=75&w=100&zc=1" src="<?php echo get_template_directory_uri(); ?>/timthumb.php?src=<?php echo constant("THUMB_SMALL_DEFAULT");?>&h=75&w=100&zc=1" alt="<?php the_title(); ?>" />
-                            <?php }elseif (suxingme('suxingme_timthumb')) {	?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/timthumb.php?src=<?php echo post_thumbnail_src(); ?>&h=75&w=100&zc=1" alt="<?php the_title(); ?>" class="thumbnail"/>
-                            <?php } else { ?>
-                                <img src="<?php echo post_thumbnail_src(); ?>" alt="<?php the_title(); ?>" class="thumbnail" />
-                            <?php } ?>
-
-                        </a></div>
-                    <div class="title">
-                        <h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
-                        <span><?php echo timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s')) ); ?></span>
-
+        //SELECT * FROM wp_posts WHERE 1=1 AND wp_posts.post_type = 'dwqa-question' AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'private') ORDER BY wp_posts.post_date DESC LIMIT 0, 8
+        $sql = "SELECT * FROM wp_posts WHERE 1=1 AND wp_posts.post_type = 'dwqa-question' AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'private') ORDER BY ".$orderby." DESC LIMIT 0, ".$limit;
+        global $wpdb;
+        $results = $wpdb->get_results($sql);
+        //print_r($results);
+        foreach($results as $ele) { ?>
+                <li>
+                    <div style="font-size:14px;height: 20px;padding-left: 30px;background: url(<?php echo get_template_directory_uri();?>/includes/images/question-ico.png) no-repeat;">
+                        <span>
+                            <a href="<?php echo $ele->guid; ?>" title="<?php echo $ele->post_title; ?>"><?php echo $ele->post_title; ?></a>
+                        </span>
                     </div>
                 </li>
-            <?php } $i++;} wp_reset_query();?>
+            <?php }  wp_reset_query();?>
     </ul>
 <?php
 }
