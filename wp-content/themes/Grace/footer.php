@@ -1,8 +1,27 @@
+<link href="<?php echo get_template_directory_uri()?>/inc/css/myfoot.css" rel="stylesheet" type="text/css" />
 <div class="clearfix"></div>
 <?php if( suxingme('suxingme_footer_style','suxingme_footer_style_1') == 'suxingme_footer_style_1' ) { ?>
+
+<div class="social-footer">
+			<?php if(suxingme('suxingme_social_weibo')){?>
+				<a class="weiboii" title="微博关注" href="<?php echo suxingme('suxingme_social_weibo') ;  ?>" target="_blank"><i class="icon-weibo"></i></a>
+			<?php } ?>
+			<?php if(suxingme('suxingme_social_qqweibo')){?>
+				<a class="ttweiboii"  href="<?php echo suxingme('suxingme_social_qqweibo') ;  ?>" target="_blank" rel="nofollow" title="腾讯微博"><i class="icon-tencent-weibo"></i></a>
+			<?php } ?>
+			<?php if(suxingme('suxingme_social_email')){?>
+				<a class="mailii" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=<?php echo suxingme('suxingme_social_email');?>"target="_blank"><i class="icon-mail-2"></i></a>
+			<?php } ?>
+			<?php if(suxingme('suxingme_social_qq')){?>
+				<a class="qqii" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo suxingme('suxingme_social_qq');  ?>&site=qq&menu=yes" target="_blank"><i class="icon-qq"></i></a>
+			<?php } ?>
+			<?php if(suxingme('suxingme_social_weixin')){?>
+				<a id="tooltip-f-weixin" class="wxii" title="微信公众号" href="javascript:void(0);"><i class="icon-wechat"></i></a>
+			<?php } ?>
+		</div>
 <div id="footer" class="one-s-footer clearfix">
 	<div class="container">
-		<div class="social-footer">
+		<!--<div class="social-footer">
 			<?php if(suxingme('suxingme_social_weibo')){?>
 				<a class="weiboii" href="<?php echo suxingme('suxingme_social_weibo') ;  ?>" target="_blank"><i class="icon-weibo"></i></a>
 			<?php } ?>
@@ -18,19 +37,16 @@
 			<?php if(suxingme('suxingme_social_weixin')){?>
 				<a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);"><i class="icon-wechat"></i></a>
 			<?php } ?>
-		</div>
+		</div>-->
 		<div class="footer-copyright">Copyright © <?php echo intval(date('Y')); ?> <a class="site-link" href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>" rel="home"><?php bloginfo('name'); ?></a> <?php if( suxingme('suxingme_beian') ) { ?> <a href="http://www.miitbeian.gov.cn" rel="external nofollow" target="_blank"><?php echo suxingme('suxingme_beian'); ?></a><?php } ?> <?php if( suxingme('suxingme_statistics_code') ) { ?><?php echo suxingme('suxingme_statistics_code'); ?><?php } ?>
 		<br/>Powered By WordPress · Theme By <a href="http://www.suxing.me" target="_blank" rel="nofollow">Suxing</a> 
 		</div>
 	</div>
 </div>
 <?php } else{ ?>
-<div id="footer" class="two-s-footer clearfix">
-	<div class="footer-box">
-		<div class="container" id="footer-box-in">
-			<div class="social-footer">
+	<div class="social-footer">
 				<?php if(suxingme('suxingme_social_weibo')){?>
-					<a class="weiboii" href="<?php echo suxingme('suxingme_social_weibo') ;  ?>" target="_blank"><i class="icon-weibo"></i></a>
+					<a class="weiboii" title="关注微博" href="<?php echo suxingme('suxingme_social_weibo') ;  ?>" target="_blank"><i class="icon-weibo"></i></a>
 				<?php } ?>
 				<?php if(suxingme('suxingme_social_qqweibo')){?>
 					<a class="ttweiboii" href="<?php echo suxingme('suxingme_social_qqweibo') ;  ?>" target="_blank" rel="nofollow" title="腾讯微博"><i class="icon-tencent-weibo"></i></a>
@@ -42,9 +58,13 @@
 					<a class="qqii" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo suxingme('suxingme_social_qq');  ?>&site=qq&menu=yes" target="_blank"><i class="icon-qq"></i></a>
 				<?php } ?>
 				<?php if(suxingme('suxingme_social_weixin')){?>
-					<a id="tooltip-f-weixin" class="wxii" href="javascript:void(0);"><i class="icon-wechat"></i></a>
+					<a id="tooltip-f-weixin" title="微信公众号" class="wxii" href="javascript:void(0);"><i class="icon-wechat"></i></a>
 				<?php } ?>
 			</div>
+<div id="footer" class="two-s-footer clearfix">
+	<div class="footer-box">
+		<div class="container" id="footer-box-in">
+			
 			<div class="nav-footer">
 			<?php 
 				if ( function_exists( 'wp_nav_menu' ) && has_nav_menu('footer-nav') ) {
@@ -159,6 +179,7 @@
       	 if(oIE){
     	 oIE.className="article col-xs-12 col-sm-7 col-md-7"}
       </script>
+      
 <![endif]-->
 </body>
 </html>

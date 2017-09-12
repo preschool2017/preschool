@@ -232,11 +232,16 @@ jQuery(document).ready(function($) {
     !function(o){"use strict";o.fn.toTop=function(t){var i=this,e=o(window),s=o("html, body"),n=o.extend({autohide:!0,offset:420,speed:500,position:!0,right:38,bottom:38},t);i.css({cursor:"pointer"}),n.autohide&&i.css("display","none"),n.position&&i.css({position:"fixed",right:n.right,bottom:n.bottom}),i.click(function(){s.animate({scrollTop:0},n.speed)}),e.scroll(function(){var o=e.scrollTop();n.autohide&&(o>n.offset?i.fadeIn(n.speed):i.fadeOut(n.speed))})}}(jQuery);
     $(function() {
         $('.to-top').toTop();
-     });
-    $('body').append('<a class="to-top" style="border:1px solid #fff;"><i class="icon-up-big"></i></a>');
-    $(window).scroll(function(event){
-        if($(document).scrollTop()==0){$(".social-footer").fadeOut(500)}else if($(document).scrollTop()>=500){$(".social-footer").fadeIn(500)}
     });
+    $('body').append('<a class="to-top" id="toTOP" style="border:1px solid #fff;"><i class="icon-up-big"></i></a>');
+   
+            if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE7.0") {
+                $(".to-top").css("bottom","-200px")
+            }
+$(window).scroll(function(event){
+	if($(document).scrollTop()==0){$(".social-footer").fadeOut(500)}else if($(document).scrollTop()>=500){$(".social-footer").fadeIn(500)}
+ });
+
     /*
     -------------------------
     MAIN NAV

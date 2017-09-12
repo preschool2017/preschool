@@ -115,15 +115,6 @@ get_header();
                     </div>
                 </dd>
             </a>
-
-            <!--<dd class="col-md-3 col-xs-6">
-                <img src="img/8.jpg" class="img-responsive center-block" alt="专家"/>
-                <div class="box">
-                    <h3>王建平</h3>
-                    <p>首都师范大学学前教育学院院长</p>
-                    <a href="javascript:;"></a>
-                </div>
-            </dd>-->
         </dl>
         <div class="clearfix"></div>
     </div>
@@ -145,61 +136,61 @@ get_header();
                 <dl class="tab-pane fade in active" id="education">
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/06/09/%e8%b5%b5%e5%bf%a0%e5%bf%83/"
-                           target="_blank"><img src="<?php bloginfo('template_url');?>/topic/img/expert (5).jpg" class="img-responsive center-block" alt="专家"/></a>
+                           target="_blank" title="赵忠心"><img src="<?php bloginfo('template_url');?>/topic/img/expert (5).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">赵忠心</p>
 
                     </dd>
                     <dd class="col-md-3 col-xs-6">
-                        <a href="http://www.preschool.net.cn/blog/2017/06/09/933/" target="_blank"><img
+                        <a href="http://www.preschool.net.cn/blog/2017/06/09/933/" target="_blank" title="楚江亭"><img
                                 src="<?php bloginfo('template_url');?>/topic/img/expert (28).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">楚江亭</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/06/09/%e7%a8%8b%e5%85%89%e6%b3%89/"
-                           target="_blank"><img src="<?php bloginfo('template_url');?>/topic/img/expert (27).jpg" class="img-responsive center-block" alt="专家"/></a>
+                           target="_blank" title="程光泉"><img src="<?php bloginfo('template_url');?>/topic/img/expert (27).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">程光泉</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/06/23/%e4%bd%99%e6%b8%85%e8%87%a3%e5%89%af%e6%95%99%e6%8e%88/"
-                           target="_blank"><img src="<?php bloginfo('template_url');?>/topic/img/expert (2).jpg" class="img-responsive center-block" alt="专家"/></a>
+                           target="_blank" title="余清臣"><img src="<?php bloginfo('template_url');?>/topic/img/expert (2).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">余清臣</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
-                        <img src="<?php bloginfo('template_url');?>/topic/img/expert (32).jpg" class="img-responsive center-block" alt="专家"/>
+                        <img src="<?php bloginfo('template_url');?>/topic/img/expert (32).jpg" title="王建平" class="img-responsive center-block" alt="专家"/>
 
                         <p class="Zname">王建平</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/07/26/%e6%9b%be%e7%90%a6-%e5%8c%97%e4%ba%ac%e5%b8%88%e8%8c%83%e5%a4%a7%e5%ad%a6%e6%95%99%e8%82%b2%e5%ad%a6%e9%83%a8%e5%b7%a5%e4%bc%9a%e4%b8%bb%e5%b8%ad/"
-                           target="_blank"><img src="<?php bloginfo('template_url');?>/topic/img/expert (12).jpg" class="img-responsive center-block" alt="专家"/></a>
+                           target="_blank" title="曾琦"><img src="<?php bloginfo('template_url');?>/topic/img/expert (12).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">曾琦</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/07/11/%e6%9d%a8%e5%ba%86%e4%ba%91-%e5%8c%97%e4%ba%ac%e5%b8%88%e8%8c%83%e5%a4%a7%e5%ad%a6%e5%a4%96%e6%96%87%e5%ad%a6%e9%99%a2%e6%95%99%e6%8e%88/"
-                           target="_blank">
+                           target="_blank" title="刘庆云">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (1).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">刘庆云</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/07/04/%e6%9d%8e%e9%a3%9e%e9%9b%aa-%e5%89%af%e6%95%99%e6%8e%88/"
-                           target="_blank"><img src="<?php bloginfo('template_url');?>/topic/img/expert (17).jpg" class="img-responsive center-block" alt="专家"/></a>
+                           target="_blank" title="李飞雪"><img src="<?php bloginfo('template_url');?>/topic/img/expert (17).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">李飞雪</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
-                        <a href="http://www.preschool.net.cn/blog/2017/07/04/9728/" target="_blank">
+                        <a href="http://www.preschool.net.cn/blog/2017/07/04/9728/" title="李琳" target="_blank">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (18).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">李琳</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
-                        <a href="http://www.preschool.net.cn/blog/2017/06/22/%e5%bc%a0%e5%b3%b0/" target="_blank">
+                        <a href="http://www.preschool.net.cn/blog/2017/06/22/%e5%bc%a0%e5%b3%b0/" title="张峰" target="_blank">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (3).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">张峰</p>
@@ -209,81 +200,81 @@ get_header();
                 <dl class="tab-pane fade" id="Medical">
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/08/30/%e8%91%9b%e6%96%87%e5%bd%a4-%e7%8e%b0%e4%bb%bb%e9%a6%96%e9%83%bd%e5%8c%bb%e7%a7%91%e5%a4%a7%e5%ad%a6%e9%99%84%e5%b1%9e%e5%8c%97%e4%ba%ac%e5%90%8c%e4%bb%81%e5%8c%bb%e9%99%a2%e8%80%b3%e9%bc%bb%e5%92%bd/"
-                           target="_blank">
+                           target="_blank" title="葛文彤">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (8).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">葛文彤</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/08/22/%e5%90%91%e8%8e%89%e4%b8%93%e8%ae%bf%ef%bd%9c%e6%95%8f%e5%84%bf%e6%88%90%e9%95%bf%ef%bc%8c%e9%a2%84%e9%98%b2%e4%b8%ba%e5%85%88/"
-                           target="_blank">
+                           target="_blank" title="向莉">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (15).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">向莉</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/07/11/%e5%a7%9c%e7%8e%89%e6%ad%a6-%e5%8c%97%e4%ba%ac%e5%a4%a7%e5%ad%a6%e5%8c%bb%e5%ad%a6%e9%83%a8%e5%84%bf%e7%a7%91%e7%b3%bb%e4%b8%bb%e4%bb%bb/"
-                           target="_blank">
+                           target="_blank" title="姜玉武">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (16).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">姜玉武</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/07/04/%e5%94%90%e5%8a%9b%e8%a1%8c-%e4%b8%bb%e4%bb%bb%e5%8c%bb%e5%b8%88/"
-                           target="_blank">
+                           target="_blank" title="唐力行">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (6).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">唐力行</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
-                        <a href="javascript:;" target="_blank">
+                        <a href="javascript:;" target="_blank" title="熊晖">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (33).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">熊晖</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
-                        <a href="http://www.preschool.net.cn/blog/2017/06/09/948/" target="_blank">
+                        <a href="http://www.preschool.net.cn/blog/2017/06/09/948/" title="李荣辉" target="_blank">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (19).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">李荣辉</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
-                        <a href="http://www.preschool.net.cn/blog/2017/06/22/%e7%9f%b3%e7%b2%a4%e7%a7%80/" target="_blank">
+                        <a href="http://www.preschool.net.cn/blog/2017/06/22/%e7%9f%b3%e7%b2%a4%e7%a7%80/" title="石粤秀" target="_blank">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (29).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">石粤秀</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/08/30/%e5%87%8c%e9%9b%81-%e5%8c%97%e4%ba%ac%e5%ae%89%e8%b4%9e%e5%8c%bb%e9%99%a2%e5%b0%8f%e5%84%bf%e5%bf%83%e5%86%85%e7%a7%91%e5%89%af%e4%b8%bb%e4%bb%bb%e5%8c%bb%e5%b8%88/ "
-                           target="_blank">
+                           target="_blank" title="凌雁">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (21).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">凌雁</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/07/04/%e5%90%95%e6%b3%bd-%e5%89%af%e4%b8%bb%e4%bb%bb%e5%8c%bb%e5%b8%88/"
-                           target="_blank">
+                           target="_blank" title="吕泽">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (10).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">吕泽</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="10、http://www.preschool.net.cn/blog/2017/07/04/%e5%90%95%e6%b3%bd-%e5%89%af%e4%b8%bb%e4%bb%bb%e5%8c%bb%e5%b8%88/"
-                           target="_blank">
+                           target="_blank" title="郝剑平">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (9).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">郝剑平</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/06/21/%e9%bb%84%e6%b6%9b%e5%89%af%e4%b8%bb%e4%bb%bb%e5%8c%bb%e5%b8%88/"
-                           target="_blank">
+                           target="_blank" title="黄涛">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (14).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">黄涛</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/07/04/%e5%88%98%e5%90%91%e7%ba%a2-%e5%ae%b6%e5%ba%ad%e5%8c%bb%e5%ad%a6/"
-                           target="_blank">
+                           target="_blank" title="刘向红">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (23).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">刘向红</p>
@@ -292,49 +283,49 @@ get_header();
                 <dl class="tab-pane fade" id="Nutrition">
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/07/28/%e9%a9%ac%e5%86%a0%e7%94%9f%ef%bc%9a%e5%b9%bc%e5%84%bf%e6%88%90%e9%95%bf%ef%bc%8c%e4%bb%8e%e9%a3%9f%e8%82%b2%e5%bc%80%e5%a7%8b/"
-                           target="_blank">
+                           target="_blank" title="马冠生">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (25).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">马冠生</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/07/26/%e5%b4%94%e9%a2%96-%e5%85%a8%e5%9b%bd12320%e7%ae%a1%e7%90%86%e4%b8%ad%e5%bf%83%e4%b8%bb%e4%bb%bb/"
-                           target="_blank">
+                           target="_blank" title="崔颖">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (13).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">崔颖</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/07/13/%e5%b4%94%e7%bb%8d%e7%8f%8d%e4%b8%93%e8%ae%bf%ef%bd%9c%e8%bf%99%e4%b8%aa%e6%9a%91%e5%81%87%e8%b7%9f%e4%b8%93%e5%ae%b6%e5%ad%a6%e7%a7%91%e5%ad%a6%e8%82%b2%e5%84%bf/"
-                           target="_blank">
+                           target="_blank" title="崔绍珍">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (26).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">崔绍珍</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/07/26/%e6%9d%8e%e4%b8%80%e8%be%b0-%e5%8c%97%e4%ba%ac%e5%b8%82%e5%ad%a6%e5%89%8d%e5%84%bf%e7%ab%a5%e4%bf%9d%e6%95%99%e5%b7%a5%e4%bd%9c%e8%80%85%e5%8d%8f%e4%bc%9a%e5%89%af%e7%a7%98%e4%b9%a6%e9%95%bf/"
-                           target="_blank">
+                           target="_blank" title="李一辰">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (20).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">李一辰</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/07/04/%e5%ad%99%e7%be%8e%e5%b9%b3-%e4%b8%bb%e4%bb%bb%e5%8c%bb%e5%b8%88/"
-                           target="_blank">
+                           target="_blank" title="孙美平">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (30).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">孙美平</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="6、http://www.preschool.net.cn/blog/2017/06/21/%e5%ae%89%e5%81%a5%e5%8d%8e%e5%89%af%e4%b8%bb%e4%bb%bb%e8%90%a5%e5%85%bb%e5%b8%88/"
-                           target="_blank">
+                           target="_blank" title="安健华">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert(35).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">安健华</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="7、http://www.preschool.net.cn/blog/2017/07/04/%e4%bb%bb%e5%a9%a7-%e9%a6%96%e5%b8%ad%e5%be%ae%e7%94%9f%e7%89%a9%e7%a7%91%e5%ad%a6%e5%ae%b6/"
-                           target="_blank">
+                           target="_blank" title="任婧">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (24).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">任婧</p>
@@ -344,14 +335,14 @@ get_header();
                 <dl class="tab-pane fade" id="Law">
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/08/11/%e5%ad%99%e7%be%8e%e5%a6%8d%e4%b8%93%e8%ae%bf%ef%bd%9c%e5%84%bf%e7%ab%a5%e5%90%88%e6%b3%95%e6%9d%83%e7%9b%8a%e4%bf%9d%e9%9a%9c/"
-                           target="_blank">
+                           target="_blank" title="孙美妍">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (31).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">孙美妍</p>
                     </dd>
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/07/07/%e5%bc%a0%e9%9b%aa%e6%a2%85-%e5%be%8b%e5%b8%88/"
-                           target="_blank">
+                           target="_blank" title="张雪梅">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (4).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">张雪梅</p>
@@ -360,7 +351,7 @@ get_header();
                 <dl class="tab-pane fade" id="Psychology">
                     <dd class="col-md-3 col-xs-6">
                         <a href="http://www.preschool.net.cn/blog/2017/08/22/%e5%88%98%e6%85%a7%e6%ba%90-%e5%85%b3%e6%b3%a8%e5%b9%bc%e5%84%bf%e5%bf%83%e7%90%86%e5%81%a5%e5%ba%b7/"
-                           target="_blank">
+                           target="_blank" title="刘慧源">
                             <img src="<?php bloginfo('template_url');?>/topic/img/expert (22).jpg" class="img-responsive center-block" alt="专家"/></a>
 
                         <p class="Zname">刘慧源</p>

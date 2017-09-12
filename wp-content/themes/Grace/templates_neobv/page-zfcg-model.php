@@ -226,8 +226,8 @@ foreach ( $link_cat_ids as $key => $value) {
       			cbox2.className="col-md-5 visible-md visible-lg";
       			cbox1.style.paddingRight="20"
       			cbox1.style.paddingBottom="8"
-      			 var $$ = jQuery.noConflict();
-      			 $$(".hidden-xs").find(".col-md-12").css("padding-bottom","20px")
+      			 jQuery(function($){$(".hidden-xs").find(".col-md-12").css("padding-bottom","20px")})
+      			
       </script>
       
 <![endif]-->
