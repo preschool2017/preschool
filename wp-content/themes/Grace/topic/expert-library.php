@@ -5,7 +5,6 @@
 get_header();
 ?>
 <link href="<?php bloginfo('template_url');?>/topic/css/common.css" type="text/css" rel="stylesheet">
-<script src="<?php bloginfo('template_url');?>/topic/js/jquery-3.2.1.js" type="text/javascript"></script>
 
 <div class="container-fluid" id="my-box">
     <div class="row">
@@ -379,7 +378,8 @@ get_header();
         crossorigin="anonymous"></script>
 
 <script>
-    $(function () {
+    var $$ = jQuery.noConflict();
+    $$(function ($) {
 
         var time = null;
         clearInterval(time);

@@ -24,7 +24,6 @@
 <script src=”http://code.jquery.com/jquery-1.9.1.min.js”></script>
 <script type=text/javascript src="http://www.preschool.net.cn/wp-content/themes/Grace/js/suxingme.js?ver=Grace7"></script>
 <![endif]-->
-
 </head>
 <body <?php body_class( suxingme_bodyclass() ); ?>>
 <div id="header" class=" navbar-fixed-top">
@@ -181,13 +180,14 @@
     		    jQuery(".menu li").eq(48).after(msg);
     		<?php }?>
     <?php }else{?>                    
-    	    var msgd = '<li><a href="http://www.preschool.net.cn/login-registered/">登录注册</a></li>';
+    	    var msgd = '<li style="margin-left: 100px"><a href="http://www.preschool.net.cn/login-registered/">登录注册</a></li>';
     	    var nbsp = '<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>';
     		<?php if(wp_is_mobile()){?>
     			jQuery(".collapse li").eq(48).after(msgd);
     		<?php }else{?>
-    			jQuery(".menu li").eq(48).after(nbsp);
-    		    jQuery(".menu li").eq(49).after(msgd);
+                var li_len = jQuery(".menu li").length;
+    			//jQuery(".menu li").eq(48).after(nbsp);
+    		    jQuery(".menu li").eq(li_len-1).after(msgd);
     		<?php }?>
     <?php }?>
 </script>

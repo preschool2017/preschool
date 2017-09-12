@@ -233,8 +233,10 @@ jQuery(document).ready(function($) {
     $(function() {
         $('.to-top').toTop();
      });
-    //$('body').append('<a class="to-top" style="border:1px solid #fff;"><i class="icon-up-big"></i></a>');
-
+    $('body').append('<a class="to-top" style="border:1px solid #fff;"><i class="icon-up-big"></i></a>');
+    $(window).scroll(function(event){
+        if($(document).scrollTop()==0){$(".social-footer").fadeOut(500)}else if($(document).scrollTop()>=500){$(".social-footer").fadeIn(500)}
+    });
     /*
     -------------------------
     MAIN NAV

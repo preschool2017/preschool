@@ -142,8 +142,8 @@
 
 </div>  
 
-</div>    
-
+</div>
+<link href="<?php echo get_template_directory_uri()?>/inc/css/my.css" rel="stylesheet" type="text/css" />
 <?php wp_footer();
 /*if (current_user_can('administrator')){
     global $wpdb;
@@ -151,7 +151,6 @@
     print_r($wpdb->queries);
     echo "</pre>";
 }*/
-
 ?>
 <!--[if lte IE 7]>
 	<link rel="stylesheet" type="text/css" href="includes/font-awesome/css/fontello-ie7.css"/>
